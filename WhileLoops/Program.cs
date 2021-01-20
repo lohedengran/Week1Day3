@@ -15,11 +15,20 @@ namespace WhileLoops
             Console.ReadKey();
 
             Console.WriteLine("Enter a number between 1 and 100:");
-            int input = int.Parse(Console.ReadLine());
-            while (input <= 100 && input >= 1)
+            try
             {
-                Console.WriteLine(input++);
+            int input = int.Parse(Console.ReadLine());
+                while (input <= 100 && input >= 1)
+                {
+                    Console.WriteLine(input++);
+                }
             }
+            catch (FormatException)
+            {
+                Console.WriteLine("Wrong format");
+
+            }
+
 
             int j = 1;
 
@@ -28,11 +37,15 @@ namespace WhileLoops
             do
             {
                 Console.WriteLine(j++);
-            } while (j <=20);
+            } while (j <= 20);
 
             Console.ReadKey();
 
             Console.WriteLine("Enter a number between 1 and 100:");
+
+            try
+            {
+
             int secondInput = int.Parse(Console.ReadLine());
             if (secondInput >= 1 && secondInput <= 100)
             {
@@ -42,6 +55,13 @@ namespace WhileLoops
                 } while (secondInput <= 100);
             }
 
+            }
+            catch (FormatException)
+            {
+
+                Console.WriteLine("Wrong format");
+
+            }
 
         }
     }
