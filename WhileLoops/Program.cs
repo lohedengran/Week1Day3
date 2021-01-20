@@ -34,7 +34,7 @@ namespace WhileLoops
 
             Console.WriteLine("Enter a number between 1 and 100:");
             int secondInput = int.Parse(Console.ReadLine());
-            if (secondInput >= 1)
+            if (secondInput >= 1 && secondInput <= 100)
             {
                 do
                 {
