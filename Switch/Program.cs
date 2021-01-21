@@ -41,7 +41,8 @@ namespace Switch
                         Console.WriteLine("Du angav ett felaktivt värde");
                         break;
                 }
-                VisaMeny();
+                done = true;
+                
                
             }
 
